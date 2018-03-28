@@ -11,14 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Auth::routes();
 
 
-
-Route::get(env('ADMIN_URL'), function () {
-    return view('home');
-});
