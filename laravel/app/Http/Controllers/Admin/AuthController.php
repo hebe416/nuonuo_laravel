@@ -19,7 +19,7 @@ class AuthController extends Controller
 
     function __construct()
     {
-
+        $this->middleware('guest')->except('logout');
        // $this->middleware('guest:admin')->except('logout');
     }
 
@@ -30,6 +30,7 @@ class AuthController extends Controller
      */
     public function showLoginForm()
     {
+
         return view('auth.login');
     }
 

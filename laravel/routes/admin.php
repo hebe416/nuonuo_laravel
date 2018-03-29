@@ -14,6 +14,7 @@ Route::get('login', 'Admin\\AuthController@showLoginForm')->name('login');
 Route::group(['middleware' => 'auth.check.login'], function () {
     Route::get('', 'HomeController@index')->name('home.index');
 });
+
 /*<!==用户登录 ==!>*/
 Route::post('login', 'Admin\\AuthController@login');
 
