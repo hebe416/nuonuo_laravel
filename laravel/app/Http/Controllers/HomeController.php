@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+
     }
 
     /**
@@ -23,10 +23,14 @@ class HomeController extends Controller
      */
     public function index()
     {
+
         $user_obj = \UserClass::createUser();
         $users = $user_obj->getListPage();
         return view('auth.index', compact(['users']));
     }
+
+
+
 
     /**
      * Show the application dashboard.
